@@ -1,0 +1,19 @@
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+artifacts/
+docs/
+
+# Internal Phase 5 packaging utilities are kept locally but are not published.
+experiments/package_phase5.py
+tests/test_phase5_package.py
+
+# Common large model outputs.
+*.ckpt
+*.onnx
+*.pt
+*.pth

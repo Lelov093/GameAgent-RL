@@ -1,0 +1,18 @@
+[experiment]
+track = "B"
+training_seed = 1001
+total_steps = 500000
+eval_interval = 50000
+eval_seeds = [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+
+[ppo]
+learning_rate = 0.0003
+n_envs = 8
+n_steps = 128
+batch_size = 256
+n_epochs = 4
+gamma = 0.99
+gae_lambda = 0.95
+ent_coef = 0.01
+net_arch = [128, 128]
+lstm_hidden_size = 128

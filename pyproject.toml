@@ -1,0 +1,32 @@
+[project]
+name = "gameagent-rl"
+version = "0.1.0"
+description = "Reinforcement learning and evaluation for constrained and partially observable game-agent environments."
+license = "Apache-2.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "gymnasium",
+    "minigrid",
+    "numpy",
+    "sb3-contrib",
+    "stable-baselines3",
+    "torch",
+]
+
+[build-system]
+requires = ["setuptools>=80"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "matplotlib",
+    "pillow",
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

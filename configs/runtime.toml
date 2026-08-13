@@ -1,0 +1,5 @@
+[runtime]
+seed = 1001
+device = "auto"
+artifact_dir = "artifacts"
+environment_id = "MiniGrid-DoorKey-5x5-v0"

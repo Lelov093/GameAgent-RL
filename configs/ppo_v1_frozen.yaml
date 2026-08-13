@@ -1,0 +1,29 @@
+algorithm_id: ppo_v1_frozen
+implementation: gameagent_rl.ppo.PPOTrainer
+network:
+  type: shared_actor_critic_mlp
+  hidden_sizes: [128, 128]
+  activation: tanh
+  initialization: orthogonal
+optimizer:
+  type: adam
+  learning_rate: 0.0003
+ppo:
+  n_envs: 8
+  n_steps: 128
+  batch_size: 256
+  update_epochs: 4
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_epsilon: 0.20
+  value_coefficient: 0.50
+  entropy_coefficient: 0.01
+  max_grad_norm: 0.50
+  advantage_normalization: true
+runtime:
+  device: cpu
+validation:
+  development_training_seeds: [1101, 1102, 1103]
+  development_evaluation_seed_range: [2001, 2020]
+  training_steps: 100000
+  configuration_trials: 1
